@@ -31,9 +31,10 @@ const scanNode = (n, length, ignoredClasses) => {
 };
 
 /**
- * Traverses through a DOM to find elements that are larger than a specfic length
+ * Traverses through a DOM to find elements that are larger than a specific length
  * @param length {Number} Usually will be entered as window.innerWidth
  * @param ignoredClasses {Array} An array of classes (i.e. [".slick-track", ".annoying-element"])
+ * @returns Matched elements along with their offsetLeft, width, and dim
  */
 const checkDimensions = (length, ignoredClasses) => {
     scanNode(document.body, length, ignoredClasses);
